@@ -1,0 +1,411 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: "open sans", sans-serif;
+}
+
+nav, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+/*HEADER*/
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #ffffff;
+}
+
+header img {
+  width: 200px;
+}
+
+header nav {
+  display: flex;
+}
+
+header li a {
+  color: #191c03;
+}
+
+header li {
+  margin: 0 15px;
+}
+
+header li:first-child {
+  margin-left: 0;
+}
+
+header li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+
+  header img {
+    margin-bottom: 15px;
+  }
+}
+/*Hero*/
+.hero {
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+
+.hero h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero .btn {
+  background-color: #ffffff;
+  border-radius: 4px;
+  color: #191c03;
+  padding: 20px 50px;
+  text-transform: uppercase;
+}
+
+.form-contato {
+  width: 35rem;
+  background-color: #ffffff;
+  color: #191c03;
+  flex-direction: column;
+  opacity: 0.8;
+  border: 1px solid #c3c63b;
+  border-radius: 4px;
+  padding: 100px 50px;
+}
+
+@media (max-width: 700px) {
+  .form-contato {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .h1-contato {
+    font-size: 15px;
+  }
+}
+form .h1-contato {
+  font-size: 2.2rem;
+}
+
+.hero hr {
+  width: 200px;
+  height: 2px;
+  background-color: #191c03;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.form-contato input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #c3c63b;
+  border-radius: 4px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.form-contato textarea {
+  height: 8rem;
+}
+
+.form-contato button {
+  padding: 15px;
+  color: #ffffff;
+  background-color: #191c03;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 10rem;
+  opacity: 0.8;
+  float: right;
+}
+
+.form-contato button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 736px) {
+  .form-contato {
+    height: 30rem;
+    margin-top: 8rem;
+    padding: 5px 5px 0 5px;
+  }
+}
+/*Conheça o hotel*/
+.conheca-o-hotel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.conheca-o-hotel h3 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #191c03;
+  text-align: center;
+}
+
+.conheca-o-hotel p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  color: #191c03;
+  text-align: center;
+}
+
+.conheca-o-hotel hr {
+  width: 200px;
+  height: 2px;
+  background-color: #191c03;
+  margin-bottom: 70px;
+  border: none;
+}
+
+.conheca-o-hotel .grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.error {
+  color: red;
+  float: left;
+  font-size: 0.9rem;
+}
+
+.conheca-o-hotel .grid li {
+  height: 350px;
+  padding: 20px;
+  border-radius: 4px;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+}
+
+.conheca-o-hotel .grid li.small {
+  flex-basis: 40%;
+}
+
+.conheca-o-hotel .grid li.iframe {
+  flex-basis: 40%;
+}
+
+.conheca-o-hotel .grid li.large {
+  flex-basis: 60%;
+}
+
+@media (max-width: 700px) {
+  .conheca-o-hotel .grid li.iframe {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .conheca-o-hotel .grid li.small,
+.conheca-o-hotel .grid li.large {
+    flex-basis: 100%;
+  }
+}
+/*Caracteristicas*/
+.caracteristicas {
+  background-color: #191c03;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.caracteristicas h3 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.caracteristicas p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.caracteristicas hr {
+  width: 200px;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 70px;
+  border: none;
+}
+
+.caracteristicas .grid {
+  width: 100%;
+  display: flex;
+}
+
+.caracteristicas .grid li {
+  padding: 0 30px;
+  text-align: center;
+}
+
+.caracteristicas .grid li i {
+  color: #c3c63b;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.caracteristicas .grid li h4 {
+  font-size: 1.5rem;
+  color: #c3c63b;
+  margin-bottom: 30px;
+}
+
+.caracteristicas .grid li p {
+  color: #ffffff;
+}
+
+@media (max-width: 850px) {
+  .caracteristicas .grid {
+    flex-direction: column;
+  }
+}
+.localizacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px;
+  margin-top: -9rem;
+}
+
+/*Newsletter*/
+.newslatter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.newslatter h3 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #c3c63b;
+  text-align: center;
+}
+
+.newslatter p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  color: #c3c63b;
+  text-align: center;
+}
+
+.newslatter hr {
+  width: 200px;
+  height: 2px;
+  background-color: #c3c63b;
+  margin-bottom: 70px;
+  border: none;
+}
+
+.newslatter form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 800px;
+}
+
+.newslatter input {
+  padding: 15px;
+  border: 1px solid #c3c63b;
+  border-radius: 4px;
+  margin-right: 15px;
+  flex: 1;
+}
+
+.newslatter button {
+  padding: 15px;
+  color: #ffffff;
+  background-color: #191c03;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .newslatter input {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+}
+/*Footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #191c03;
+  padding: 50px 0;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+footer ul li {
+  margin-right: 10px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+
+footer ul li a {
+  color: #c3c63b;
+}
+
+footer p {
+  color: #c3c63b;
+  text-align: center;
+}
+
+/*# sourceMappingURL=estilo.css.map */

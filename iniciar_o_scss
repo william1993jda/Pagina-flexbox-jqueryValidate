@@ -1,0 +1,15 @@
+                                  Comandos para rodar o Sass
+
+
+1- Crie um arquivo .scss ou renomeie o arquivo existente .css para .scss
+em seguida abra o terminal (CMD) e digite os comandos:
+# sass estilo.scss:estilo.css
+isso irá criar um outro arquivo css mas você irá fazer alterações apenas no .scss
+
+2- em seguida para digite o seguinte comando para deixar o compilador do scss rodando:
+# sass --watch estilo.scss:estilo.css
+
+Com isso todas as alterações que fizer o compilador do sass autoaticamente atualiza o arquivo original .css
+
+Para parar de executar o compilador user:
+ctrl+c
