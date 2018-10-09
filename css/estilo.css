@@ -242,15 +242,6 @@ iframe {
   height: 100%;
 }
 
-form .ddd {
-  width: 13%;
-}
-
-.fone {
-  width: 100%;
-  display: flex;
-}
-
 .conheca-o-hotel .grid li.large {
   flex-basis: 60%;
 }
