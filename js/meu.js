@@ -13,6 +13,13 @@ $(document).ready(function() {
                 email: true
             },
 
+            ddd: {
+                required: true,
+                number: true,
+                maxlength: 2,
+                minlength: 2
+            },
+
             Fone: {
                 required: true,
                 number: true,
