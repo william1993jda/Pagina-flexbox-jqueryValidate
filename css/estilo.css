@@ -16,6 +16,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   opacity: 0.9;
+  font-weight: bold;
 }
 
 a:hover {
@@ -103,7 +104,6 @@ header li:last-child {
   width: 35rem;
   color: #191c03;
   flex-direction: column;
-  opacity: 0.8;
   border: 1px solid #ffffff;
   border-radius: 4px;
   padding: 50px;
@@ -142,13 +142,9 @@ form .h1-contato {
   margin-bottom: 10px;
 }
 
-.fone-input {
-  width: 85%;
-  margin-left: 10px;
-}
-
 .form-contato textarea {
   height: 8rem;
+  min-width: 100%;
 }
 
 .form-contato button {
@@ -218,9 +214,10 @@ form .h1-contato {
 }
 
 .error {
-  color: red;
+  color: #FF0000;
   float: left;
   font-size: 0.9rem;
+  margin: 0;
 }
 
 .conheca-o-hotel .grid li {
