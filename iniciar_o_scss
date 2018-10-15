@@ -1,4 +1,4 @@
-                                  Comandos para rodar o Sass
+                                 Comandos para rodar o Sass
 
 
 1- Crie um arquivo .scss ou renomeie o arquivo existente .css para .scss
@@ -11,5 +11,5 @@ isso irá criar um outro arquivo css mas você irá fazer alterações apenas no
 
 Com isso todas as alterações que fizer o compilador do sass autoaticamente atualiza o arquivo original .css
 
-Para parar de executar o compilador user:
-ctrl+c
+Para parar de executar o compilador use:
+ctrl + c

@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $("#form").validate({
+    $("#form, #form-cadastro").validate({
         rules: {
-            nome: {
+            Nome: {
                 required: true,
                 maxlength: 50,
                 minlength: 5,
@@ -19,6 +19,11 @@ $(document).ready(function() {
 
             Mensagem: {
                 required: true
+            },
+
+            cadastre: {
+                required: true,
+                email: true
             }
         }
     });
@@ -49,4 +54,27 @@ $("#phone").bind('input propertychange',function() {
             texto = texto.substr(0,15);
     }
     $(this).val(texto);
+});
+
+var $target = $('.anime'),
+    animationClass = 'anime-start';
+
+function animeScroll() {
+    var documentTop = $(document).scrollTop();
+    console.log(documentTop);
+
+    $target.each(function () {
+        var itemTop = $(this).offset().top;
+        if (documentTop > itemTop) {
+            $(this).addClass(animationClass);
+        } else {
+            $(this).removeClass(animationClass);
+        }
+    })
+}
+
+animeScroll();
+
+$(document).scroll(function () {
+    animeScroll();
 });

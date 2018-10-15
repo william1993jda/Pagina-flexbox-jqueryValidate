@@ -21,11 +21,12 @@
     </nav>
 </header>
 <div class="hero">
-    <form id="form" class="form-contato" action="">
+    <form id="form" class="form-contato" action="email.php" method="post">
         <h1 class="h1-contato">Entre em contato conosco</h1>
-        <input name="nome" type="text" placeholder="Nome" required>
+        <input name="Nome" type="text" placeholder="Nome" required>
         <input name="Email" type="email" placeholder="Email" required>
         <input name="Fone" type="text" id="phone" placeholder="Telefone" required>
+        <input type="text" name="Assunto" size="35" placeholder="Assunto">
         <textarea name="Mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
         <div class="btn-enviar">
             <button>Enviar</button>

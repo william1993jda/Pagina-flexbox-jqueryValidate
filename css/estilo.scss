@@ -30,6 +30,7 @@ a:hover {
 }
 
 /*HEADER*/
+
 header {
     width: 100%;
     position: absolute;
@@ -127,6 +128,18 @@ header li:last-child {
     .h1-contato {
         font-size: 15px;
     }
+}
+
+
+.anime {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+    transition: .3s;
+}
+
+.anime-start {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 form .h1-contato {
@@ -260,12 +273,6 @@ iframe {
     flex-basis: 60%;
 }
 
-@media (max-width: 700px) {
-    .conheca-o-hotel .grid li.iframe {
-        display: none;
-    }
-}
-
 @media (max-width: 768px) {
     .conheca-o-hotel .grid li.small,
     .conheca-o-hotel .grid li.large{
@@ -274,9 +281,6 @@ iframe {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        background-image: none;
-    }
 
     form {
         margin-bottom: 10px;
@@ -403,6 +407,10 @@ iframe {
     flex: 1;
 }
 
+#cadastre-error {
+  flex-grow: 2;
+}
+
 .newslatter button {
     padding: 15px;
     color: $cor-branca;
@@ -450,4 +458,24 @@ footer ul li a {
 footer p {
     color: $cor-verde;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    header {
+        position: relative;
+    }
+
+    form .form-contato {
+        height: 30rem;
+    }
+
+    form .h1-contato {
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+
+    form button {
+        background-color: #004F80;
+        width: 100%;
+    }
 }
