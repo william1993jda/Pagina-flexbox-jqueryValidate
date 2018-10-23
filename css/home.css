@@ -164,6 +164,17 @@ header li:last-child {
     border: none;
 }
 
+/*.anime {*/
+    /*opacity: 0;*/
+    /*transform: translate3d(-100px, 0, 0);*/
+    /*transition: 0.3s;*/
+/*}*/
+
+/*.anime-start {*/
+    /*opacity: 1;*/
+    /*transform: translate3d(0, 0, 0);*/
+/*}*/
+
 .conheca-o-hotel .grid {
     width: 100%;
     display: flex;
