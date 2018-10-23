@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
 });
 
-$("#phone").bind('input propertychange',function() {
+$("#phone").bind('input propertychange', function() {
 
     var texto = $(this).val();
 
@@ -56,25 +56,56 @@ $("#phone").bind('input propertychange',function() {
     $(this).val(texto);
 });
 
-var $target = $('.anime'),
-    animationClass = 'anime-start';
+/*Função Ajax */
+$(function() {
+    $('#form').submit(function() {
+        var form = $(this).serialize();
+        var request = $.ajax({
+            method:"POST",
+            url:"email.php",
+            data:form,
+            dataType:"json",
+            beforeSend: function () {
+                $("#enviar").html("Enviando...").addClass("enviar");
+            }
+        });
 
-function animeScroll() {
-    var documentTop = $(document).scrollTop();
-    console.log(documentTop);
+        request.always(function(e) {
+            console.log(e);
+            $("#enviar").html("enviar").removeClass();
 
-    $target.each(function () {
-        var itemTop = $(this).offset().top;
-        if (documentTop > itemTop) {
-            $(this).addClass(animationClass);
-        } else {
-            $(this).removeClass(animationClass);
-        }
-    })
-}
-
-animeScroll();
-
-$(document).scroll(function () {
-    animeScroll();
+            $('#form').each(function () {
+                $('#aviso').html('Enviado com sucesso!').addClass("cor-alerta");
+                this.reset();
+                $("p").click(function () {
+                    $("p").remove("#aviso");
+                });
+            });
+        });
+        return false;
+    });
 });
+// função para animar scroll
+
+// var $target = $('.anime'),
+//     animationClass = 'anime-start';
+//
+// function animeScroll() {
+//     var documentTop = $(document).scrollTop();
+//     console.log(documentTop);
+//
+//     $target.each(function () {
+//         var itemTop = $(this).offset().top;
+//         if (documentTop > itemTop) {
+//             $(this).addClass(animationClass);
+//         } else {
+//             $(this).removeClass(animationClass);
+//         }
+//     })
+// }
+
+// animeScroll();
+
+// $(document).scroll(function () {
+//     animeScroll();
+// });
