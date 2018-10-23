@@ -78,8 +78,8 @@ if ($_POST) {
 
             require_once("phpmailer/class.phpmailer.php");
 
-            define('GUSER', 'william.armstrong50@gmail.com');    // <-- Insira aqui o seu GMail
-            define('GPWD', 'Wkm223165');                        // <-- Insira aqui a senha do seu GMail
+            define('GUSER', 'email.teste.para.mailer@gmail.com');    // <-- Insira aqui o seu GMail
+            define('GPWD', '2214113045');                        // <-- Insira aqui a senha do seu GMail
 
             function smtpmailer($para, $de, $de_nome, $assunto, $corpo)
             {
@@ -111,7 +111,7 @@ if ($_POST) {
             /*Insira abaixo o email que irá receber a mensagem, o email que irá enviar (o mesmo da variável GUSER),
             o nome do email que envia a mensagem, o Assunto da mensagem e por último a variável com o corpo do email.*/
 
-            if (smtpmailer('william.aquino@atitude.com.br', 'william.aquino@atitude.com.br', 'Hotel Paraiso',
+            if (smtpmailer('william.armstrong50@gmail.com', 'william.armstrong50@gmail.com', 'Hotel Paraiso',
                 'Hotel Paraiso',
                 $Vai)) {
                 echo '<div class="alert alert-success jumbotron" role="alert">' . $Nome . ', seu E-mail foi enviado com sucesso!<hr>
